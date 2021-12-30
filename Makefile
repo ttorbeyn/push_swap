@@ -18,7 +18,6 @@ INCLUDE			=	-I include
 LIBFT			=	@ cd libft && make ;
 
 SRC				=				libft/libft.a \
-								gnl/get_next_line.c \
 								ft_operator.c
 
 OBJS			=	$(SRC:.c=.o)
