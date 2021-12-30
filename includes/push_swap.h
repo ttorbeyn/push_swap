@@ -6,7 +6,7 @@
 /*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:12:36 by ttorbeyn          #+#    #+#             */
-/*   Updated: 2021/12/20 20:12:39 by ttorbeyn         ###   ########.fr       */
+/*   Updated: 2021/12/30 19:30:40 by hubert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,11 @@
 # include "get_next_line.h"
 # include "libft.h"
 
+typedef struct s_list
+{
+	int	content;
+	t_list *next;
+	t_list *previous;
+} t_list;
 
 #endif
