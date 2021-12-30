@@ -6,7 +6,7 @@
 #    By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/26 18:56:41 by ttorbeyn          #+#    #+#              #
-#    Updated: 2021/04/26 18:56:43 by ttorbeyn         ###   ########.fr        #
+#    Updated: 2021/12/30 20:22:25 by hubert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CC				=	gcc
@@ -17,8 +17,8 @@ INCLUDE			=	-I include
 
 LIBFT			=	@ cd libft && make ;
 
-SRC				=				libft/libft.a \
-								ft_operator.c
+SRC				=	libft/libft.a \
+					ft_operator.c
 
 OBJS			=	$(SRC:.c=.o)
 
@@ -37,7 +37,7 @@ clean:
 			$(RM) $(OBJS)
 
 fclean:		clean
-			$(RM) cub3D
+			$(RM) push_swap
 
 re:			fclean all
 

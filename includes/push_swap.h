@@ -6,7 +6,7 @@
 /*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:12:36 by ttorbeyn          #+#    #+#             */
-/*   Updated: 2021/12/30 19:30:40 by hubert           ###   ########.fr       */
+/*   Updated: 2021/12/30 20:26:01 by hubert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,13 @@
 # include <math.h>
 # include <mlx.h>
 # include <limits.h>
-# include "get_next_line.h"
 # include "libft.h"
 
-typedef struct s_list
+typedef struct s_lst
 {
 	int	content;
-	t_list *next;
-	t_list *previous;
-} t_list;
+	struct s_lst *next;
+	struct s_lst *previous;
+} t_lst;
 
 #endif
