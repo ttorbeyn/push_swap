@@ -8,6 +8,7 @@ int	ft_swap_a()
 
 int main()
 {
+
 	printf("coucou\n");
 	return (0);
 }
