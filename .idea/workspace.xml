@@ -28,17 +28,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8ab06e-acd4-45d6-a666-583b933cbb8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_operator.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_operator.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/libft.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/push_swap.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/push_swap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstclear.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstclear.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstdelone.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstiter.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstiter.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstnew.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstnew.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft_modif/ft_lstadd_back.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft_modif/ft_lstadd_back.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/push_swap" beforeDir="false" afterPath="$PROJECT_DIR$/push_swap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +82,7 @@
       <updated>1640040144283</updated>
       <workItem from="1640040145373" duration="2183000" />
       <workItem from="1640053877767" duration="219000" />
-      <workItem from="1641133255555" duration="8409000" />
+      <workItem from="1641133255555" duration="11963000" />
     </task>
     <servers />
   </component>

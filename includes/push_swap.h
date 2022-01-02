@@ -32,6 +32,12 @@ int ft_sb(t_list **b, int write_sb);
 int ft_ss(t_list **a, t_list **b, int write_ss);
 int	ft_pa(t_list **a, t_list **b, int write_pa);
 int	ft_pb(t_list **a, t_list **b, int write_pa);
+int	ft_ra(t_list **a, int write_ra);
+int	ft_rb(t_list **b, int write_rb);
+int	ft_rr(t_list **a, t_list **b, int write_rr);
+int ft_rra(t_list **a, int write_rra);
+int ft_rrb(t_list **b, int write_rrb);
+int	ft_rrr(t_list **a, t_list **b, int write_rrr);
 
 void				ft_lstadd_back(t_list **alst, t_list *new);
 //void				ft_lstadd_front(t_list **alst, t_list *new);

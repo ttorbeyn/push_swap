@@ -23,7 +23,7 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 		*alst = new;
 	else
 	{
-		while (current->next != 0)
+		while (current->next)
 			current = current->next;
 		current->next = new;
 		new->next = 0;
