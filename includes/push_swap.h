@@ -25,11 +25,23 @@
 # include <limits.h>
 # include "libft.h"
 
-typedef struct s_lst
-{
-	int	content;
-	struct s_lst *next;
-	struct s_lst *previous;
-} t_lst;
+
+//operators
+int ft_sa(t_list **a, int write_sa);
+int ft_sb(t_list **b, int write_sb);
+int ft_ss(t_list **a, t_list **b, int write_ss);
+int	ft_pa(t_list **a, t_list **b, int write_pa);
+int	ft_pb(t_list **a, t_list **b, int write_pa);
+
+void				ft_lstadd_back(t_list **alst, t_list *new);
+//void				ft_lstadd_front(t_list **alst, t_list *new);
+//void				ft_lstclear(t_list **lst, void (*del)(int));
+//void				ft_lstdelone(t_list *lst, void (*del)(int));
+//void				ft_lstiter(t_list *lst, void (*f)(int));
+//t_list				*ft_lstlast(t_list *lst);
+//t_list				*ft_lstmap(t_list *lst, int (*f)(int),
+//								 void (*del)(int));
+t_list				*ft_lstnew(int content);
+//int					ft_lstsize(t_list *lst);
 
 #endif

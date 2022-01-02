@@ -1,63 +1,80 @@
 #include "includes/push_swap.h"
 
-int	equal_chained(t_lst *a, t_lst *b)
+int ft_sa(t_list **a, int write_sa)
 {
-	a->content = b->content;
-	a->next = b->next;
+	t_list	*first;
+	t_list	*second;
+	t_list	*third;
+
+	if (!a || !*a || !(*a)->next)
+		return (0);
+	first = *a;
+	second = first->next;
+	third = second->next;
+	*a = second;
+	second->next = first;
+	first->next = third;
+	if (write_sa)
+		write(1, "sb\n", 3);
 	return (0);
 }
 
-//t_lst	*ft_swap_a(t_lst *a)
-//{
-//	t_lst	*first;
-//	t_lst	*tmp;
-//
-//	first = a;
-//	if (a && a->next)
-//	{
-//		tmp = a;
-//
-//		a->next = a;
-//	}
-//	return (first);
-//}first
-
-
-int	ft_print_lst(t_lst *a)
+int ft_sb(t_list **b, int write_sb)
 {
+	t_list	*first;
+	t_list	*second;
+	t_list	*third;
 
-	while (a)
-	{
-		printf("%d\n", a->content);
-		a = a->next;
-	}
+	if (!b || !*b || !(*b)->next)
+		return (0);
+	first = *b;
+	second = first->next;
+	third = second->next;
+	*b = second;
+	second->next = first;
+	first->next = third;
+	if (write_sb)
+		write(1, "sb\n", 3);
 	return (0);
 }
 
-int main()
+int ft_ss(t_list **a, t_list **b, int write_ss)
 {
-	t_lst *a;
-	t_lst *b;
-	t_lst *c;
+	ft_sa(a, 0);
+	ft_sb(b, 0);
+	if (write_ss)
+		write(1, "ss\n", 3);
+	return (0);
+}
 
-	a = malloc(sizeof(t_lst));
-	b = malloc(sizeof(t_lst));
-	c = malloc(sizeof(t_lst));
-	if (a)
-	{
-		a->content = 21;
-		a->next = b;
-	}
-	if (b)
-	{
-		b->content = 42;
-		b->next = c;
-	}
-	if (c)
-	{
-		c->content = 7;
-		c->next = NULL;
-	}
-	ft_print_lst(a);
+int	ft_pa(t_list **a, t_list **b, int write_pa)
+{
+	if (!b || !*b)
+		return (0);
+	t_list	*first_a;
+	t_list	*first_b;
+	first_a = *a;
+	first_b = *b;
+	*b = first_b->next;
+	first_b->next = first_a;
+	*a = first_b;
+	if (write_pa)
+		write(1, "pa\n", 3);
+	return (0);
+}
+
+int	ft_pb(t_list **a, t_list **b, int write_pb)
+{
+	if (!a || !*a)
+		return (0);
+	t_list	*first_a;
+	t_list	*first_b;
+	first_a = *a;
+	first_b = *b;
+	*a = first_a->next;
+	first_a->next = first_b;
+	*b = first_a;
+	if (write_pb)
+		write(1, "pb\n", 3);
 	return (0);
 }

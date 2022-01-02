@@ -28,8 +28,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8ab06e-acd4-45d6-a666-583b933cbb8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstadd_back.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstadd_back.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_operator.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_operator.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/libft.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/push_swap.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/push_swap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstclear.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstclear.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstdelone.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstiter.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstiter.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstmap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft/ft_lstnew.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstnew.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/push_swap" beforeDir="false" afterPath="$PROJECT_DIR$/push_swap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +52,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/utils/operator" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectId" id="22ZLQHrVCdG0Xn1R0EOM3AwXPMW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,11 +63,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/utils" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -70,7 +76,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="false" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7c8ab06e-acd4-45d6-a666-583b933cbb8f" name="Default Changelist" comment="" />
@@ -79,7 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1640040144283</updated>
       <workItem from="1640040145373" duration="2183000" />
-      <workItem from="1640884210760" duration="7487000" />
+      <workItem from="1640053877767" duration="219000" />
+      <workItem from="1641133255555" duration="8409000" />
     </task>
     <servers />
   </component>
@@ -99,17 +106,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="180" y="147" width="906" height="629" key="#Inspections" timestamp="1640887788356">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="1247" y="539" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1640053894327">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="180" y="147" width="906" height="629" key="#Inspections/0.23.1440.877@0.23.1440.877" timestamp="1640887788356" />
-    <state x="400" y="272" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1640887516614">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="400" y="272" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1640887516614" />
-    <state x="259" y="100" key="SettingsEditor" timestamp="1640888185498">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="259" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1640888185498" />
+    <state x="1247" y="539" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1640053894327" />
   </component>
 </project>

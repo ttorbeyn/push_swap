@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hubert <ttorbeyn@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/15 19:08:11 by hubert            #+#    #+#             */
-/*   Updated: 2021/01/15 19:08:45 by hubert           ###   ########.fr       */
+/*   Created: 2021/01/12 23:47:16 by ttorbeyn          #+#    #+#             */
+/*   Updated: 2021/12/30 21:23:26 by hubert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(int))
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*current;
-	t_list	*tmp;
 
-	if ((!lst) || (!del) || (!(*lst)))
+	if (!alst || !new)
 		return ;
-	current = *lst;
-	while (current != 0)
+	current = *alst;
+	if (current == 0)
+		*alst = new;
+	else
 	{
-		(*del)(current->content);
-		tmp = current;
-		current = current->next;
-		free(tmp);
+		while (current->next != 0)
+			current = current->next;
+		current->next = new;
+		new->next = 0;
 	}
-	*lst = 0;
 }

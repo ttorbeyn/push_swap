@@ -17,8 +17,17 @@ INCLUDE			=	-I include
 
 LIBFT			=	@ cd libft && make ;
 
-SRC				=	libft/libft.a \
-					ft_operator.c
+SRC				=	main.c \
+					ft_operator.c \
+					./libft_modif/ft_lstadd_back.c \
+					./libft_modif/ft_lstnew.c
+#					libft_modif/ft_lstadd_front.c \
+#					libft_modif/ft_lstclear.c \
+#					libft_modif/ft_lstdelone.c \
+#					libft_modif/ft_lstiter.c \
+#					libft_modif/ft_lstlast.c \
+#					libft_modif/ft_lstmap.c \
+#					libft_modif/ft_lstsize.c
 
 OBJS			=	$(SRC:.c=.o)
 
