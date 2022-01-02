@@ -12,8 +12,12 @@ int ft_sa(t_list **a, int write_sa)
 	second = first->next;
 	third = second->next;
 	*a = second;
+
+	second->previous = NULL;
 	second->next = first;
+	first->previous = second;
 	first->next = third;
+	third->previous = first;
 	if (write_sa)
 		write(1, "sb\n", 3);
 	return (0);
@@ -31,8 +35,11 @@ int ft_sb(t_list **b, int write_sb)
 	second = first->next;
 	third = second->next;
 	*b = second;
+	second->previous = NULL;
 	second->next = first;
+	first->previous = second;
 	first->next = third;
+	third->previous = first;
 	if (write_sb)
 		write(1, "sb\n", 3);
 	return (0);
@@ -54,11 +61,16 @@ int	ft_pa(t_list **a, t_list **b, int write_pa)
 
 	if (!b || !*b)
 		return (0);
+
 	first_a = *a;
 	first_b = *b;
+
 	*b = first_b->next;
+	first_b->next->previous = NULL;
 	first_b->next = first_a;
 	*a = first_b;
+	(*a)->next->previous = first_b;
+
 	if (write_pa)
 		write(1, "pa\n", 3);
 	return (0);
@@ -74,8 +86,10 @@ int	ft_pb(t_list **a, t_list **b, int write_pb)
 	first_a = *a;
 	first_b = *b;
 	*a = first_a->next;
+	first_a->next->previous = NULL;
 	first_a->next = first_b;
 	*b = first_a;
+	(*b)->next->previous = first_a;
 	if (write_pb)
 		write(1, "pb\n", 3);
 	return (0);
@@ -88,8 +102,10 @@ int	ft_ra(t_list **a, int write_ra)
 
 	first_a = *a;
 	*a = first_a->next;
+	(*a)->previous = NULL;
 	i = ft_lstlast(*a);
 	i->next = first_a;
+	first_a->previous = i;
 	first_a->next = NULL;
 	if (write_ra)
 		write(1, "ra\n", 3);
@@ -103,8 +119,10 @@ int	ft_rb(t_list **b, int write_rb)
 
 	first_b = *b;
 	*b = first_b->next;
+	(*b)->previous = NULL;
 	i = ft_lstlast(*b);
 	i->next = first_b;
+	first_b->previous = i;
 	first_b->next = NULL;
 	if (write_rb)
 		write(1, "rb\n", 3);
@@ -132,6 +150,8 @@ int ft_rra(t_list **a, int write_rra)
 	tmp = i;
 	*a = tmp;
 	tmp->next = first_a;
+	tmp->previous = NULL;
+	first_a->previous = tmp;
 	if (write_rra)
 		write(1, "rra\n", 4);
 	return (0);
@@ -149,6 +169,9 @@ int ft_rrb(t_list **b, int write_rrb)
 	tmp = i;
 	*b = tmp;
 	tmp->next = first_b;
+	tmp->previous = NULL;
+	first_b->previous = tmp;
+
 	if (write_rrb)
 		write(1, "rrb\n", 4);
 	return (0);
