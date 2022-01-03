@@ -40,6 +40,8 @@ int	ft_atoi(char *str)
 	}
 	y = 0;
 	c = 0;
+	if (!ft_isdigit(str[i]))
+		exit (0);
 	while (str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
 	{
 		y *= 10;
