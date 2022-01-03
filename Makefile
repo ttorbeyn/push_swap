@@ -24,6 +24,7 @@ SRC				=	main.c \
 					ft_parsing.c \
 					ft_utils.c \
 					./libft_modif/ft_atoi.c \
+					./libft_modif/ft_split.c \
 					./libft_modif/ft_lstadd_back.c \
 					./libft_modif/ft_lstnew.c \
 					./libft_modif/ft_lstlast.c

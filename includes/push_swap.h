@@ -55,6 +55,7 @@ int ft_parsing(char *str, t_list **a);
 
 //lst_utils
 int	ft_atoi(char *str);
+char	**ft_split(char const *s, char c);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstnew(int content);
 t_list				*ft_lstlast(t_list *lst);

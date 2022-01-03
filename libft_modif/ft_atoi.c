@@ -12,18 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-static	int	ft_verifyll(unsigned long long a, int sign, int c)
-{
-	unsigned long long	max;
-
-	max = 9223372036854775807U;
-	if (((a > max) || c > 19) && sign > 0)
-		return (-1);
-	if (((a > (max + 1)) || c > 19) && sign < 0)
-		return (0);
-	return (1);
-}
-
 static	int	ft_isspace2(char *str)
 {
 	int	i;
@@ -59,7 +47,7 @@ int	ft_atoi(char *str)
 		i++;
 		c++;
 	}
-	if (ft_verifyll(y, sign, c) != 1)
-		return (ft_verifyll(y, sign, c));
+	if (str[i] != ' ' && str[i] != '\0')
+		exit (0);
 	return (y * sign);
 }
