@@ -16,12 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_list
-{
-	int				content;
-	struct s_list	*next;
-	struct s_list	*previous;
-}					t_list;
+
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);

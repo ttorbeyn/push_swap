@@ -23,23 +23,36 @@
 # include <math.h>
 # include <mlx.h>
 # include <limits.h>
-# include "libft.h"
+//# include "libft.h"
 
+typedef struct s_list
+{
+	int				content;
+	struct s_list	*next;
+	struct s_list	*previous;
+}					t_list;
 
-//operators
+//ft_operator_1
 int ft_sa(t_list **a, int write_sa);
 int ft_sb(t_list **b, int write_sb);
 int ft_ss(t_list **a, t_list **b, int write_ss);
 int	ft_pa(t_list **a, t_list **b, int write_pa);
 int	ft_pb(t_list **a, t_list **b, int write_pa);
+
+//ft_operator_2
 int	ft_ra(t_list **a, int write_ra);
 int	ft_rb(t_list **b, int write_rb);
 int	ft_rr(t_list **a, t_list **b, int write_rr);
+
+//ft_operator_3
 int ft_rra(t_list **a, int write_rra);
 int ft_rrb(t_list **b, int write_rrb);
 int	ft_rrr(t_list **a, t_list **b, int write_rrr);
 
+//lst_utils
 void				ft_lstadd_back(t_list **alst, t_list *new);
+t_list				*ft_lstnew(int content);
+t_list				*ft_lstlast(t_list *lst);
 //void				ft_lstadd_front(t_list **alst, t_list *new);
 //void				ft_lstclear(t_list **lst, void (*del)(int));
 //void				ft_lstdelone(t_list *lst, void (*del)(int));
@@ -47,7 +60,5 @@ void				ft_lstadd_back(t_list **alst, t_list *new);
 //t_list				*ft_lstlast(t_list *lst);
 //t_list				*ft_lstmap(t_list *lst, int (*f)(int),
 //								 void (*del)(int));
-t_list				*ft_lstnew(int content);
 //int					ft_lstsize(t_list *lst);
-
 #endif

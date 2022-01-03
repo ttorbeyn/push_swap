@@ -15,10 +15,12 @@ CFLAGS			=	-Wall -Wextra -Werror
 
 INCLUDE			=	-I include
 
-LIBFT			=	@ cd libft && make ;
+#LIBFT			=	@ cd libft && make ;
 
 SRC				=	main.c \
-					ft_operator.c \
+					ft_operator_1.c \
+					ft_operator_2.c \
+					ft_operator_3.c \
 					./libft_modif/ft_lstadd_back.c \
 					./libft_modif/ft_lstnew.c \
 					./libft_modif/ft_lstlast.c
@@ -39,11 +41,11 @@ NAME			=	push_swap
 all: 		$(NAME)
 
 $(NAME):
-			@$(LIBFT)
+#			@$(LIBFT)
 			@$(CC) $(CFLAGS) $(SRC) $(INCLUDE) -o $(NAME)
 
 clean:
-			@cd libft && make clean
+#			@cd libft && make clean
 			$(RM) $(OBJS)
 
 fclean:		clean
