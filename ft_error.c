@@ -25,4 +25,3 @@ int	ft_exit(t_list **a)
 	write(2, "Error\n", 6);
 	exit (0);
 }
-

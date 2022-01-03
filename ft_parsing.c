@@ -1,5 +1,26 @@
 #include "includes/push_swap.h"
 
+
+int	ft_check_duplicate(t_list **a)
+{
+	t_list *first;
+	t_list *tmp;
+
+	tmp = *a;
+	while (tmp)
+	{
+		first = tmp->next;
+		while (first)
+		{
+			if (tmp->content == first->content)
+				ft_exit(a);
+			first = first->next;
+		}
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
 void	ft_lstadd_front2(t_list **lst, t_list *new)
 {
 	(*lst)->previous = new;
@@ -25,5 +46,6 @@ int ft_parsing(char *str, t_list **a)
 			*a = b;
 		i++;
 	}
+
 	return (0);
 }

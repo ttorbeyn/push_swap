@@ -23,10 +23,10 @@ static int	ft_isspace2(char *str)
 	return (i);
 }
 
-int	ft_atoi(char *str, t_list **a)
+long	ft_atoi(char *str, t_list **a)
 {
 	int					i;
-	unsigned long		y;
+	long		y;
 	int					sign;
 	int					c;
 
@@ -49,7 +49,8 @@ int	ft_atoi(char *str, t_list **a)
 		i++;
 		c++;
 	}
-	if (str[i] != ' ' && str[i] != '\0')
+	y *= sign;
+	if ((str[i] != ' ' && str[i] != '\0') || y > INT_MAX || y < INT_MIN)
 		ft_exit (a);
-	return (y * sign);
+	return (y);
 }

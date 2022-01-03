@@ -33,7 +33,8 @@ typedef struct s_list
 }					t_list;
 
 //ft_push_swap
-
+int	ft_print_list_adress(t_list *a, t_list *b);
+int	ft_print_list(t_list *a, t_list *b);
 
 //ft_error
 int	ft_exit(t_list **a);
@@ -58,9 +59,10 @@ int	ft_rrr(t_list **a, t_list **b, int write_rrr);
 //ft_parsing
 void	ft_lstadd_front2(t_list **lst, t_list *new);
 int ft_parsing(char *str, t_list **a);
+int	ft_check_duplicate(t_list **a);
 
 //lst_utils
-int	ft_atoi(char *str, t_list **a);
+long	ft_atoi(char *str, t_list **a);
 char	**ft_split(char const *s, char c);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstnew(int content);
