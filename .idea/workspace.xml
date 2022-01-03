@@ -62,9 +62,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -78,7 +78,8 @@
       <updated>1640040144283</updated>
       <workItem from="1640040145373" duration="2183000" />
       <workItem from="1640053877767" duration="219000" />
-      <workItem from="1641133255555" duration="17126000" />
+      <workItem from="1641133255555" duration="17361000" />
+      <workItem from="1641163669474" duration="4720000" />
     </task>
     <servers />
   </component>
@@ -102,5 +103,9 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1247" y="539" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1640053894327" />
+    <state x="945" y="351" width="670" height="676" key="search.everywhere.popup" timestamp="1641158182704">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="945" y="351" width="670" height="676" key="search.everywhere.popup/0.23.2560.1417@0.23.2560.1417" timestamp="1641158182704" />
   </component>
 </project>

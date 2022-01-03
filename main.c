@@ -1,15 +1,16 @@
 #include "includes/push_swap.h"
 
-int	ft_print_list(t_list *a, t_list *b)
+int	ft_print_list_adress(t_list *a, t_list *b)
 {
 	printf("A\t\t|\tB\n");
 	printf("----------------------------------\n");
 	while (a && b)
 	{
-		//if (a->previous && b->previous)
+		if (a->previous && b->previous)
 			printf("%p\t|\t%p\n", a->previous, b->previous);
 		printf("%d\t\t|\t%d\n", a->content, b->content);
 		printf("%p\t|\t%p\n", a, b);
+		//printf("%p\t|\t%p\n", a->next, b->next);
 		printf("----------------------------------\n");
 		a = a->next;
 		b = b->next;
@@ -36,6 +37,33 @@ int	ft_print_list(t_list *a, t_list *b)
 	return (0);
 }
 
+int	ft_print_list(t_list *a, t_list *b)
+{
+	printf("A\t\t|\tB\n");
+	printf("----------------------------------\n");
+	while (a && b)
+	{
+		printf("%d\t\t|\t%d\n", a->content, b->content);
+		printf("----------------------------------\n");
+		a = a->next;
+		b = b->next;
+	}
+	while (a)
+	{
+		printf("%d\t\t|\t\n", a->content);
+		printf("----------------------------------\n");
+		a = a->next;
+	}
+	while (b)
+	{
+		printf(" \t\t|\t%d\n", b->content);
+		printf("----------------------------------\n");
+		b = b->next;
+	}
+	printf("\n");
+	return (0);
+}
+
 void	ft_lstadd_front2(t_list **lst, t_list *new)
 {
 	(*lst)->previous = new;
@@ -46,7 +74,7 @@ void	ft_lstadd_front2(t_list **lst, t_list *new)
 
 int main()
 {
-	t_list *a;
+	t_list *a = NULL;
 	t_list *b;
 	t_list *c;
 	t_list *d;
@@ -66,10 +94,25 @@ int main()
 	ft_print_list(a, d);
 //	ft_sa(&a, 1);
 //	ft_sb(&d, 1);
-	ft_ss(&a, &d, 1);
+//	ft_ss(&a, &d, 1);
+//	ft_pa(&a, &d, 1);
+//	ft_pa(&a, &d, 1);
+//	ft_pa(&a, &d, 1);
+//	ft_pa(&a, &d, 1);
+//	ft_pb(&a, &d, 1);
+//	ft_pb(&a, &d, 1);
+//	ft_pb(&a, &d, 1);
+//	ft_pb(&a, &d, 1);
 //	ft_pb(&a, &d, 1);
 //	ft_pb(&a, &d, 1);
 //	ft_rr(&a, &d, 1);
+	ft_rra(&a, 1);
 	ft_print_list(a, d);
+	ft_rra(&a, 1);
+	ft_print_list(a, d);
+	ft_rra(&a, 1);
+	ft_print_list(a, d);
+	ft_rra(&a, 1);
+	ft_print_list_adress(a, d);
 	return (0);
 }
