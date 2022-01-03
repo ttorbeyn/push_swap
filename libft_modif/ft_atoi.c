@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-static	int	ft_isspace2(char *str)
+static int	ft_isspace2(char *str)
 {
 	int	i;
 
@@ -23,10 +23,10 @@ static	int	ft_isspace2(char *str)
 	return (i);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(char *str, t_list **a)
 {
 	int					i;
-	unsigned long long	y;
+	unsigned long		y;
 	int					sign;
 	int					c;
 
@@ -41,7 +41,7 @@ int	ft_atoi(char *str)
 	y = 0;
 	c = 0;
 	if (!ft_isdigit(str[i]))
-		exit (0);
+		ft_exit (a);
 	while (str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
 	{
 		y *= 10;
@@ -50,6 +50,6 @@ int	ft_atoi(char *str)
 		c++;
 	}
 	if (str[i] != ' ' && str[i] != '\0')
-		exit (0);
+		ft_exit (a);
 	return (y * sign);
 }

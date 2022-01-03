@@ -32,6 +32,12 @@ typedef struct s_list
 	struct s_list	*previous;
 }					t_list;
 
+//ft_push_swap
+
+
+//ft_error
+int	ft_exit(t_list **a);
+
 //ft_operator_1
 int ft_sa(t_list **a, int write_sa);
 int ft_sb(t_list **b, int write_sb);
@@ -54,7 +60,7 @@ void	ft_lstadd_front2(t_list **lst, t_list *new);
 int ft_parsing(char *str, t_list **a);
 
 //lst_utils
-int	ft_atoi(char *str);
+int	ft_atoi(char *str, t_list **a);
 char	**ft_split(char const *s, char c);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstnew(int content);

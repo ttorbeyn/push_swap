@@ -17,12 +17,13 @@ INCLUDE			=	-I include
 
 #LIBFT			=	@ cd libft && make ;
 
-SRC				=	main.c \
+SRC				=	ft_push_swap.c \
 					ft_operator_1.c \
 					ft_operator_2.c \
 					ft_operator_3.c \
 					ft_parsing.c \
 					ft_utils.c \
+					ft_error.c \
 					./libft_modif/ft_atoi.c \
 					./libft_modif/ft_split.c \
 					./libft_modif/ft_lstadd_back.c \

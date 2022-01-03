@@ -18,7 +18,7 @@ int ft_parsing(char *str, t_list **a)
 	new = ft_split(str, ' ');
 	while (new[i])
 	{
-		b = ft_lstnew(ft_atoi(new[i]));
+		b = ft_lstnew(ft_atoi(new[i], a));
 		if (a && *a)
 			ft_lstadd_front2(a, b);
 		else

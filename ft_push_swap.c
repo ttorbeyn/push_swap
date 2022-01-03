@@ -110,6 +110,6 @@ int main(int ac, char **av)
 //	ft_rra(&a, 1);
 //	ft_print_list(a, d);
 //	ft_rra(&a, 1);
-	ft_print_list_adress(a, b);
+	ft_print_list(a, b);
 	return (0);
 }
