@@ -49,7 +49,12 @@ int ft_rra(t_list **a, int write_rra);
 int ft_rrb(t_list **b, int write_rrb);
 int	ft_rrr(t_list **a, t_list **b, int write_rrr);
 
+//ft_parsing
+void	ft_lstadd_front2(t_list **lst, t_list *new);
+int ft_parsing(char *str, t_list **a);
+
 //lst_utils
+int	ft_atoi(char *str);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstnew(int content);
 t_list				*ft_lstlast(t_list *lst);
@@ -61,4 +66,9 @@ t_list				*ft_lstlast(t_list *lst);
 //t_list				*ft_lstmap(t_list *lst, int (*f)(int),
 //								 void (*del)(int));
 //int					ft_lstsize(t_list *lst);
+
+//ft_utils
+int	ft_isdigit(char c);
+int	ft_isspace(char str);
+
 #endif
