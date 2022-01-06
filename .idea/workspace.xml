@@ -28,12 +28,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8ab06e-acd4-45d6-a666-583b933cbb8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ft_sort_three.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_error.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_error.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ft_parsing.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_parsing.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ft_push_swap.c" beforeDir="false" afterPath="$PROJECT_DIR$/ft_push_swap.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/push_swap.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/push_swap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft_modif/ft_atoi.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft_modif/ft_atoi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libft_modif/ft_lstsize.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft_modif/ft_lstsize.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/push_swap" beforeDir="false" afterPath="$PROJECT_DIR$/push_swap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,9 +70,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -88,6 +88,7 @@
       <workItem from="1640053877767" duration="219000" />
       <workItem from="1641133255555" duration="17361000" />
       <workItem from="1641163669474" duration="16531000" />
+      <workItem from="1641338807276" duration="2293000" />
     </task>
     <servers />
   </component>

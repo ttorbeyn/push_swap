@@ -78,6 +78,10 @@ int main(int ac, char **av)
 		x++;
 	}
 	ft_check_duplicate(&a);
+	x = ft_lstsize(&a);
+	printf("%d\n", x);
+	if (x <= 3)
+		ft_sort_three(&a, &b);
 	ft_print_list(a, b);
 	return (0);
 }

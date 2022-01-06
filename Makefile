@@ -24,10 +24,12 @@ SRC				=	ft_push_swap.c \
 					ft_parsing.c \
 					ft_utils.c \
 					ft_error.c \
+					ft_sort_three.c \
 					./libft_modif/ft_atoi.c \
 					./libft_modif/ft_split.c \
 					./libft_modif/ft_lstadd_back.c \
 					./libft_modif/ft_lstnew.c \
+					./libft_modif/ft_lstsize.c \
 					./libft_modif/ft_lstlast.c
 #					libft_modif/ft_lstadd_front.c \
 #					libft_modif/ft_lstclear.c \

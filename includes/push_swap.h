@@ -6,7 +6,7 @@
 /*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:12:36 by ttorbeyn          #+#    #+#             */
-/*   Updated: 2021/12/30 20:26:01 by hubert           ###   ########.fr       */
+/*   Updated: 2022/01/05 00:27:20 by hubert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,16 @@ void	ft_lstadd_front2(t_list **lst, t_list *new);
 int ft_parsing(char *str, t_list **a);
 int	ft_check_duplicate(t_list **a);
 
+//ft_sort_three
+int	ft_sort_three(t_list **a, t_list **b);
+
 //lst_utils
 long	ft_atoi(char *str, t_list **a);
 char	**ft_split(char const *s, char c);
 void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstnew(int content);
 t_list				*ft_lstlast(t_list *lst);
+int	ft_lstsize(t_list **lst);
 //void				ft_lstadd_front(t_list **alst, t_list *new);
 //void				ft_lstclear(t_list **lst, void (*del)(int));
 //void				ft_lstdelone(t_list *lst, void (*del)(int));
