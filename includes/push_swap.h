@@ -21,8 +21,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <math.h>
-# include <mlx.h>
 # include <limits.h>
+//# include <mlx.h>
 //# include "libft.h"
 
 typedef struct s_list

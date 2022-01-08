@@ -7,9 +7,12 @@ int	ft_sort_three(t_list **a, t_list **b)
 	if (!b || !a)
 		return (1);
 	first = *a;
-	printf("%d | %d\n", first->content, first->next->content);
+	//printf("%d | %d\n", first->content, first->next->content);
 	if (first->content > first->next->content)
-		ft_sa(a, 1);
+    {
+        ft_sa(a, 1);
+        //first = *a;
+    }
 	return (0);
 }
 

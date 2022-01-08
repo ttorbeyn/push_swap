@@ -67,21 +67,20 @@ int	ft_print_list(t_list *a, t_list *b)
 
 int main(int ac, char **av)
 {
-	t_list *a;
-	t_list *b = NULL;
 	int x;
-
 	x = 1;
-	while (ac > x)
+    t_list *a = NULL;
+    t_list *d = NULL;
+
+    while (x < ac)
 	{
 		ft_parsing(av[x], &a);
-		x++;
+        x++;
 	}
-	ft_check_duplicate(&a);
+    ft_check_duplicate(&a);
 	x = ft_lstsize(&a);
-	printf("%d\n", x);
 	if (x <= 3)
-		ft_sort_three(&a, &b);
-	ft_print_list(a, b);
+		ft_sort_three(&a, &d);
+	ft_print_list(a, d);
 	return (0);
 }
