@@ -7,7 +7,9 @@ int	ft_sort_three(t_list **a, t_list **b)
 
 	if (!a || !b)
 		return (1);
-	while (ft_is_sort(a))
+	//if (ft_is_sort_descendant(a))
+	//	return (0);
+	while (ft_is_sort_ascendant(a))
 	{
 		first = *a;
 		second = first->next;
@@ -22,3 +24,8 @@ int	ft_sort_three(t_list **a, t_list **b)
 	}
 	return (0);
 }
+//
+//int	ft_sort_five(t_list **a, t_list **b)
+//{
+//
+//}

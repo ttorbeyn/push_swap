@@ -29,6 +29,17 @@ void	ft_lstadd_front2(t_list **lst, t_list *new)
 	new->previous = NULL;
 }
 
+void	ft_lstadd_back2(t_list **lst, t_list *new)
+{
+	t_list *first;
+
+	first = *lst;
+	first = ft_lstlast(first);
+	first->next = new;
+	new->previous = first;
+	new->next = NULL;
+}
+
 int ft_parsing(char *str, t_list **a)
 {
 	t_list *b = NULL;
@@ -42,7 +53,7 @@ int ft_parsing(char *str, t_list **a)
         b = ft_lstnew(ft_atoi(new[i], a));
         i++;
         if (a && *a)
-            ft_lstadd_front2(a, b);
+            ft_lstadd_back2(a, b);
 		else
             *a = b;
     }

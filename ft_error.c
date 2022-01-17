@@ -1,7 +1,5 @@
 #include "includes/push_swap.h"
 
-
-
 int	ft_destroy(t_list **a)
 {
 	t_list *tmp;

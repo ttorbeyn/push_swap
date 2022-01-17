@@ -13,7 +13,7 @@ int	ft_isdigit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int	ft_is_sort(t_list **a)
+int	ft_is_sort_ascendant(t_list **a)
 {
 	t_list *first;
 
@@ -21,6 +21,20 @@ int	ft_is_sort(t_list **a)
 	while (first->next)
 	{
 		if (first->content > first->next->content)
+			return (1);
+		first = first->next;
+	}
+	return (0);
+}
+
+int	ft_is_sort_descendant(t_list **a)
+{
+	t_list *first;
+
+	first = *a;
+	while (first->next)
+	{
+		if (first->content < first->next->content)
 			return (1);
 		first = first->next;
 	}

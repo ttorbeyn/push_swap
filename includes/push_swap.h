@@ -71,7 +71,7 @@ void				ft_lstadd_back(t_list **alst, t_list *new);
 t_list				*ft_lstnew(int content);
 t_list				*ft_lstlast(t_list *lst);
 int	ft_lstsize(t_list **lst);
-//void				ft_lstadd_front(t_list **alst, t_list *new);
+//void				ft_lsta.dd_front(t_list **alst, t_list *new);
 //void				ft_lstclear(t_list **lst, void (*del)(int));
 //void				ft_lstdelone(t_list *lst, void (*del)(int));
 //void				ft_lstiter(t_list *lst, void (*f)(int));
@@ -83,6 +83,7 @@ int	ft_lstsize(t_list **lst);
 //ft_utils
 int	ft_isdigit(char c);
 int	ft_isspace(char str);
-int	ft_is_sort(t_list **a);
+int	ft_is_sort_ascendant(t_list **a);
+int	ft_is_sort_descendant(t_list **a);
 
 #endif
