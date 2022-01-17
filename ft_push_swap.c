@@ -80,7 +80,9 @@ int main(int ac, char **av)
 //	ft_print_list(a, d);
     x = ft_lstsize(&a);
 	if (x <= 3)
-		ft_sort_three(&a, &d);
-//	ft_print_list(a, d);
+		ft_sort_three(&a);
+	else if (x <= 5)
+		ft_sort_five(&a, &d, x);
+	ft_print_list(a, d);
 	return (0);
 }

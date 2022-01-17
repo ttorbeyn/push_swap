@@ -62,7 +62,8 @@ int ft_parsing(char *str, t_list **a);
 int	ft_check_duplicate(t_list **a);
 
 //ft_sort_three
-int	ft_sort_three(t_list **a, t_list **b);
+int	ft_sort_three(t_list **a);
+int	ft_sort_five(t_list **a, t_list **b, int size);
 
 //lst_utils
 long	ft_atoi(char *str, t_list **a);
