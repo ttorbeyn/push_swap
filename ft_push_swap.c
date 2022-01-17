@@ -64,7 +64,6 @@ int	ft_print_list(t_list *a, t_list *b)
 	return (0);
 }
 
-
 int main(int ac, char **av)
 {
 	int x;
@@ -78,7 +77,8 @@ int main(int ac, char **av)
         x++;
 	}
     ft_check_duplicate(&a);
-	x = ft_lstsize(&a);
+	ft_print_list(a, d);
+    x = ft_lstsize(&a);
 	if (x <= 3)
 		ft_sort_three(&a, &d);
 	ft_print_list(a, d);

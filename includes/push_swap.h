@@ -83,5 +83,6 @@ int	ft_lstsize(t_list **lst);
 //ft_utils
 int	ft_isdigit(char c);
 int	ft_isspace(char str);
+int	ft_is_sort(t_list **a);
 
 #endif
