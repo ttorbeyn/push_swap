@@ -32,6 +32,13 @@ typedef struct s_list
 	struct s_list	*previous;
 }					t_list;
 
+typedef struct s_data
+{
+    int index_max;
+    int index_min;
+    int size;
+}               t_data;
+
 //ft_push_swap
 int	ft_print_list_adress(t_list *a, t_list *b);
 int	ft_print_list(t_list *a, t_list *b);
@@ -63,7 +70,7 @@ int	ft_check_duplicate(t_list **a);
 
 //ft_sort_three
 int	ft_sort_three(t_list **a);
-int	ft_sort_five(t_list **a, t_list **b, int size);
+int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 
 //lst_utils
 long	ft_atoi(char *str, t_list **a);

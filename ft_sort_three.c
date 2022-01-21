@@ -25,37 +25,61 @@ int	ft_sort_three(t_list **a)
 	return (0);
 }
 
-int	ft_find_minimum(t_list **a)
+int	ft_find_minimum(t_list **a, t_data *data)
 {
 	int x;
 	int y;
-	int	z;
 	t_list *tmp;
 
 	tmp = *a;
 	y = 0;
-	z = y;
-	x = INT_MAX;
-	while (tmp->next)
+    data->index_min = y;
+	x = tmp->content;
+	while (tmp)
 	{
 		if (tmp->content < x)
 		{
 			x = tmp->content;
-			z = y;
+			data->index_min = y;
 		}
 		y++;
 		tmp = tmp->next;
 	}
-	printf("y:%d\n", y);
-	return (z);
+	return (x);
 }
 
-int	ft_sort_five(t_list **a, t_list **b, int size)
+int	ft_find_maximum(t_list **a, t_data *data)
 {
-	printf("%d\n", ft_find_minimum(a));
+    int x;
+    int y;
+    t_list *tmp;
+
+    tmp = *a;
+    y = 0;
+    data->index_max = y;
+    x = tmp->content;
+    while (tmp)
+    {
+        if (tmp->content > x)
+        {
+            x = tmp->content;
+            data->index_max = y;
+        }
+        y++;
+        tmp = tmp->next;
+    }
+    return (x);
+}
+
+int	ft_sort_five(t_list **a, t_list **b, t_data *data)
+{
+    printf("%d\n", ft_find_minimum(a, data));
+    printf("%d\n", ft_find_maximum(a, data));
+    printf("%d\n", data->index_max);
+    printf("%d\n", data->index_min);
 
 	ft_pb(a, b, 1);;
-	if (size == 5)
+	if (data->size == 5)
 		ft_pb(a, b, 1);
 	ft_sort_three(a);
 	ft_pa(a, b, 1);

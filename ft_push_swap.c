@@ -69,6 +69,7 @@ int main(int ac, char **av)
 	int x;
     t_list *a = NULL;
     t_list *d = NULL;
+    t_data data;
 
 	x = 1;
     while (x < ac)
@@ -78,11 +79,11 @@ int main(int ac, char **av)
 	}
     ft_check_duplicate(&a);
 //	ft_print_list(a, d);
-    x = ft_lstsize(&a);
-	if (x <= 3)
+    data.size = ft_lstsize(&a);
+	if (data.size <= 3)
 		ft_sort_three(&a);
-	else if (x <= 5)
-		ft_sort_five(&a, &d, x);
+	else if (data.size <= 5)
+		ft_sort_five(&a, &d, &data);
 	ft_print_list(a, d);
 	return (0);
 }
