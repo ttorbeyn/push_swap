@@ -11,7 +11,6 @@ int	ft_sort_three(t_list **a)
 	{
 		first = *a;
 		second = first->next;
-
 		if (second->next && first->content > second->content
 			&& first->content > second->next->content)
 			ft_ra(a, 1);
@@ -20,9 +19,33 @@ int	ft_sort_three(t_list **a)
 			ft_rra(a, 1);
 		else if (first->content > second->content)
 			ft_sa(a, 1);
-
 	}
 	return (0);
+}
+
+int	ft_sort_three_b(t_list **b)
+{
+    t_list	*first;
+    t_list	*second;
+
+    if (!b)
+        return (1);
+    while (ft_lst_is_sort_ascendant(b))
+    {
+        first = *b;
+        second = first->next;
+
+        if (second->next && first->content > second->content
+            && first->content > second->next->content)
+            ft_rb(b, 1);
+        else if (second->next && first->content < second->content
+                 && second->content > second->next->content)
+            ft_rrb(b, 1);
+        else if (first->content > second->content)
+            ft_sb(b, 1);
+
+    }
+    return (0);
 }
 
 void    ft_print_tab(t_data *data)
@@ -88,6 +111,8 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data)
 //    ft_print_tab(data);
 //    printf("midpoint : %d\n", data->tab[data->size/2]);
     data->midpoint = data->tab[data->size/2];
+    if (data->size % 2 == 0)
+        data->size--;
     while (i < data->size/2)
     {
         if ((*a)->content > data->midpoint)
@@ -99,7 +124,7 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data)
             ft_ra(a, 1);
     }
     ft_sort_three(a);
-    ft_sort_three(b);
+    ft_sort_three_b(b);
     while (i > 0)
     {
         ft_pa(a, b, 1);
