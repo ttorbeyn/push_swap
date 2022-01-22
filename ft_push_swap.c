@@ -80,6 +80,7 @@ int main(int ac, char **av)
     ft_check_duplicate(&a);
 //	ft_print_list(a, d);
     data.size = ft_lstsize(&a);
+    ft_print_list(a, d);
 	if (data.size <= 3)
 		ft_sort_three(&a);
 	else if (data.size <= 5)

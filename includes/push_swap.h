@@ -37,6 +37,8 @@ typedef struct s_data
     int index_max;
     int index_min;
     int size;
+    int *tab;
+    int midpoint;
 }               t_data;
 
 //ft_push_swap
@@ -91,7 +93,8 @@ int	ft_lstsize(t_list **lst);
 //ft_utils
 int	ft_isdigit(char c);
 int	ft_isspace(char str);
-int	ft_is_sort_ascendant(t_list **a);
-int	ft_is_sort_descendant(t_list **a);
+int	ft_lst_is_sort_ascendant(t_list **a);
+int	ft_lst_is_sort_descendant(t_list **a);
+int	ft_tab_is_sort_ascendant(int *tab);
 
 #endif
