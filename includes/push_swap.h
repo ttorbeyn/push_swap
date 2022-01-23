@@ -70,9 +70,14 @@ void	ft_lstadd_front2(t_list **lst, t_list *new);
 int ft_parsing(char *str, t_list **a);
 int	ft_check_duplicate(t_list **a);
 
-//ft_sort_three
+//ft_sort_small
 int	ft_sort_three(t_list **a);
 int	ft_sort_five(t_list **a, t_list **b, t_data *data);
+
+//ft_tab
+void    ft_print_tab(t_data *data);
+int ft_list_to_tab(t_list **a, t_data *data);
+int ft_sort_tab(t_list **a, t_data *data);
 
 //lst_utils
 long	ft_atoi(char *str, t_list **a);
