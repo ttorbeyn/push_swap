@@ -25,6 +25,7 @@ SRC				=	ft_push_swap.c \
 					ft_utils.c \
 					ft_error.c \
 					ft_sort_small.c \
+					ft_sort_medium.c \
 					ft_tab.c \
 					ft_utils_print.c \
 					./libft_modif/ft_atoi.c \

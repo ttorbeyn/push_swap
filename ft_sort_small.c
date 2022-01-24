@@ -48,16 +48,12 @@ int	ft_sort_three_b(t_list **b)
     return (0);
 }
 
-
-
 int	ft_sort_five(t_list **a, t_list **b, t_data *data)
 {
     int i;
 
     i = 0;
     ft_sort_tab(a, data);
-//    ft_print_tab(data);
-//    printf("midpoint : %d\n", data->tab[data->size/2]);
     data->midpoint = data->tab[data->size/2];
     if (data->size % 2 == 0)
         data->size--;

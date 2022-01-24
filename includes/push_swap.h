@@ -74,6 +74,10 @@ int	ft_check_duplicate(t_list **a);
 int	ft_sort_three(t_list **a);
 int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 
+//ft_sort_medium
+int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data);
+
+
 //ft_tab
 void    ft_print_tab(t_data *data);
 int ft_list_to_tab(t_list **a, t_data *data);

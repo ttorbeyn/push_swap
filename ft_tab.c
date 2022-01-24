@@ -24,6 +24,7 @@ int ft_sort_tab(t_list **a, t_data *data)
     int tmp;
 
     ft_list_to_tab(a, data);
+    ft_print_tab(data);
     i = 1;
     while (i < data->size)
     {
