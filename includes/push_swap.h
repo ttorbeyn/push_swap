@@ -39,11 +39,12 @@ typedef struct s_data
     int size;
     int *tab;
     int midpoint;
+    int chunk[100];
+    int chunknb;
 }               t_data;
 
 //ft_push_swap
-int	ft_print_list_adress(t_list *a, t_list *b);
-int	ft_print_list(t_list *a, t_list *b);
+
 
 //ft_error
 int	ft_exit(t_list **a);
@@ -77,11 +78,10 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 //ft_sort_medium
 int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data);
 
-
 //ft_tab
 void    ft_print_tab(t_data *data);
 int ft_list_to_tab(t_list **a, t_data *data);
-int ft_sort_tab(t_list **a, t_data *data);
+int ft_find_midpoint(t_list **a, t_data *data, int size);
 
 //lst_utils
 long	ft_atoi(char *str, t_list **a);
@@ -91,7 +91,7 @@ t_list				*ft_lstnew(int content);
 t_list				*ft_lstlast(t_list *lst);
 int	ft_lstsize(t_list **lst);
 void	ft_lstclear(t_list **lst, void (*del)(int));
-//void				ft_lsta.dd_front(t_list **alst, t_list *new);
+//void				ft_lstadd_front(t_list **alst, t_list *new);
 //void				ft_lstclear(t_list **lst, void (*del)(int));
 //void				ft_lstdelone(t_list *lst, void (*del)(int));
 //void				ft_lstiter(t_list *lst, void (*f)(int));
@@ -106,5 +106,9 @@ int	ft_isspace(char str);
 int	ft_lst_is_sort_ascendant(t_list **a);
 int	ft_lst_is_sort_descendant(t_list **a);
 int	ft_tab_is_sort_ascendant(int *tab);
+
+//ft_utils_print
+int	ft_print_list_adress(t_list *a, t_list *b);
+int	ft_print_list(t_list *a, t_list *b);
 
 #endif

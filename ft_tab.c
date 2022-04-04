@@ -17,7 +17,7 @@ int ft_list_to_tab(t_list **a, t_data *data)
     return (0);
 }
 
-int ft_sort_tab(t_list **a, t_data *data)
+int ft_find_midpoint(t_list **a, t_data *data, int size)
 {
     int i;
     int j;
@@ -26,7 +26,7 @@ int ft_sort_tab(t_list **a, t_data *data)
     ft_list_to_tab(a, data);
     ft_print_tab(data);
     i = 1;
-    while (i < data->size)
+    while (i < size)
     {
         tmp =  data->tab[i];
         j = i - 1;
@@ -38,5 +38,6 @@ int ft_sort_tab(t_list **a, t_data *data)
         data->tab[j + 1] = tmp;
         i++;
     }
+	data->midpoint = data->tab[size/2];
     return (0);
 }
