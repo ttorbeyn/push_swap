@@ -64,7 +64,7 @@ int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
 		ft_sa(a, 1);
 	data->chunknb--;
 
-	while (data->chunknb)
+	while (data->chunknb >=0)
 	{
 		if (data->chunk[data->chunknb] < 2)
 		{
@@ -79,8 +79,19 @@ int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
 			ft_pa(a, b, 1);
 			data->chunknb--;
 		}
-		else
-			break;
+		while (data->chunk[data->chunknb] > 2)
+		{
+			ft_find_midpoint(b, data, data->chunk[data->chunknb]);
+			printf("midpoint : %d\n", data->midpoint);
+			if ((*b)->content > data->midpoint)
+			{
+				ft_pa(a, b, 1);
+				i++;
+			}
+			else
+				ft_rb(b, 1);
+			data->chunk[data->chunknb]--;
+		}
 		ft_print_list(*a, *b);
 	}
 
