@@ -85,6 +85,7 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 int ft_list_to_tab(t_list **a, t_data *data);
 int ft_tab_to_list(t_list **a, t_data *data, int *tab);
 int ft_sort_tab(int *tab, int size);
+int	ft_decimal_to_binary(int *tab, t_data *data);
 int ft_index(t_list **a, t_data *data);
 
 

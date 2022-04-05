@@ -55,6 +55,31 @@ int ft_sort_tab(int *tab, int size)
     return (0);
 }
 
+int	ft_decimal_to_binary(int *tab, t_data *data)
+{
+	int i;
+	int x;
+	int nb;
+	int ret;
+
+	i = 0;
+	while (i < data->size)
+	{
+		nb = 0;
+		x = 1;
+		while (tab[i])
+		{
+			ret = tab[i] % 2;
+			nb += ret * x;
+			tab[i] = tab[i]/2;
+			x *= 10;
+		}
+		tab[i] = nb;
+		i++;
+	}
+	return (0);
+}
+
 int ft_index(t_list **a, t_data *data)
 {
 	int	*copy;
@@ -76,15 +101,18 @@ int ft_index(t_list **a, t_data *data)
 		j = 0;
 		while (j < data->size)
 		{
-			if (copy[i] == data->tab[j])
+			if (data->tab[i] == copy[j])
 			{
-				copy[i] = j;
+				data->tab[i] = j;
 				break;
 			}
 			j++;
 		}
 		i++;
 	}
-	ft_tab_to_list(a, data, copy);
+	ft_decimal_to_binary(data->tab, data);
+	ft_print_tab(data, data->tab);
+	exit (0);
+	ft_tab_to_list(a, data, data->tab);
 	return (0);
 }
