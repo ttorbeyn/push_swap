@@ -53,8 +53,9 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data)
     int i;
 
     i = 0;
-    ft_index(a, data);
-	ft_print_list(*a, *b);
+    ft_list_to_tab(a, data);
+    ft_sort_tab(data->tab, data->size);
+	data->midpoint = data->tab[data->size/2];
     if (data->size % 2 == 0)
         data->size--;
     while (i < data->size/2)

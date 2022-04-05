@@ -25,8 +25,8 @@ int main(int ac, char **av)
 		ft_sort_three(&a);
 	else if (data.size <= 5)
 		ft_sort_five(&a, &b, &data);
-//    else if (data.size <= 100)
-//        ft_sort_one_hundred(&a, &b, &data);
+    else if (data.size <= 500)
+        ft_sort_one_hundred(&a, &b, &data);
 //	ft_print_list(a, d);
 	return (0);
 }

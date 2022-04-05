@@ -78,7 +78,7 @@ int	ft_sort_three(t_list **a);
 int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 
 //ft_sort_medium
-//int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data);
+int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data);
 
 //ft_tab
 

@@ -112,7 +112,6 @@ int ft_index(t_list **a, t_data *data)
 	}
 	ft_decimal_to_binary(data->tab, data);
 	ft_print_tab(data, data->tab);
-	exit (0);
 	ft_tab_to_list(a, data, data->tab);
 	return (0);
 }

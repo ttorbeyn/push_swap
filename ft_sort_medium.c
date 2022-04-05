@@ -114,3 +114,43 @@
 //{
 //
 //}
+
+int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
+{
+	int size;
+	int max;
+	int bits;
+	int i;
+	int j;
+	int num;
+
+
+	size = data->size;
+	max = size - 1;
+	bits = 0;
+	printf("max : %d\n", max);
+
+	while ((max >> bits) != 0)
+		bits++;
+	printf("max : %d\n", bits);
+
+	i = 0;
+	while (i < bits)
+	{
+
+		j = 0;
+		while (j < size)
+		{
+			num = (*a)->content;
+			if (((num >> i)&1) == 1)
+				ft_ra(a, 1);
+			else
+				ft_pb(a, b, 1);
+			j++;
+		}
+		while (*b)
+			ft_pa(a, b, 1);
+		i++;
+	}
+	return (0);
+}
