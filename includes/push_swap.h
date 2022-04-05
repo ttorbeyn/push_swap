@@ -81,9 +81,11 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 //int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data);
 
 //ft_tab
-void    ft_print_tab(t_data *data);
+void    ft_print_tab(t_data *data, int *tab);
 int ft_list_to_tab(t_list **a, t_data *data);
-int ft_sort_tab(t_list **a, t_data *data, int size);
+//int ft_sort_tab(t_list **a, t_data *data, int size);
+int ft_index(t_list **a, t_data *data);
+
 
 //lst_utils
 long	ft_atoi(char *str, t_list **a);

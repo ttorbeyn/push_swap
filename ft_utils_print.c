@@ -1,6 +1,6 @@
 #include "includes/push_swap.h"
 
-void    ft_print_tab(t_data *data)
+void    ft_print_tab(t_data *data, int *tab)
 {
     int i;
 
@@ -8,7 +8,7 @@ void    ft_print_tab(t_data *data)
     printf("tabsize : %d\n", data->size);
     while (i < data->size)
     {
-        printf("index : %d| valeur : %d\n", i, data->tab[i]);
+        printf("index : %d\tv:%d\n", i, tab[i]);
         i++;
     }
 }

@@ -17,27 +17,78 @@ int ft_list_to_tab(t_list **a, t_data *data)
     return (0);
 }
 
-int ft_sort_tab(t_list **a, t_data *data, int size)
+int ft_tab_to_list(t_list **a, t_data *data, int *tab)
+{
+	t_list *tmp;
+	int i;
+
+	i = 0;
+	tmp = *a;
+	while (i < data->size)
+	{
+		tmp->content = tab[i];
+		i++;
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+int ft_sort_tab(int *tab, t_data *data, int size)
 {
     int i;
     int j;
     int tmp;
 
-    ft_list_to_tab(a, data);
-    ft_print_tab(data);
+    ft_print_tab(data, tab);
     i = 1;
     while (i < size)
     {
-        tmp =  data->tab[i];
+        tmp =  tab[i];
         j = i - 1;
-        while (j >= 0 && data->tab[j] > tmp)
+        while (j >= 0 && tab[j] > tmp)
         {
-            data->tab[j + 1] = data->tab[j];
+            tab[j + 1] = tab[j];
             j = j - 1;
         }
-        data->tab[j + 1] = tmp;
+        tab[j + 1] = tmp;
         i++;
     }
-	ft_print_tab(data);
+	ft_print_tab(data, tab);
     return (0);
+}
+
+int ft_index(t_list **a, t_data *data)
+{
+	int	*copy;
+	int i;
+	int j;
+
+	ft_list_to_tab(a, data);
+	i = 0;
+	copy = malloc(sizeof(int) * data->size);
+	while (i < data->size)
+	{
+		copy[i] = data->tab[i];
+		i++;
+	}
+	ft_sort_tab(copy, data, data->size);
+	i = 0;
+	while (i < data->size)
+	{
+		j = 0;
+		while (j < data->size)
+		{
+			if (copy[i] == data->tab[j])
+			{
+				copy[i] = j;
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	ft_print_tab(data, copy);
+	ft_tab_to_list(a, data, copy);
+
+	return (0);
 }

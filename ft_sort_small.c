@@ -53,7 +53,8 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data)
     int i;
 
     i = 0;
-    ft_sort_tab(a, data, data->size);
+    ft_index(a, data);
+	ft_print_list(*a, *b);
     if (data->size % 2 == 0)
         data->size--;
     while (i < data->size/2)
