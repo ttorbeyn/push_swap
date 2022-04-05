@@ -1,17 +1,17 @@
 #include "includes/push_swap.h"
 
-void    ft_print_tab(t_data *data, int *tab)
-{
-    int i;
-
-    i = 0;
-    printf("tabsize : %d\n", data->size);
-    while (i < data->size)
-    {
-        printf("index : %d\tv:%d\n", i, tab[i]);
-        i++;
-    }
-}
+//void    ft_print_tab(t_data *data, int *tab)
+//{
+//    int i;
+//
+//    i = 0;
+//    printf("tabsize : %d\n", data->size);
+//    while (i < data->size)
+//    {
+//        printf("value :%d\n", tab[i]);
+//        i++;
+//    }
+//}
 
 int	ft_print_list_adress(t_list *a, t_list *b)
 {

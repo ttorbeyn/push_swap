@@ -33,13 +33,12 @@ int ft_tab_to_list(t_list **a, t_data *data, int *tab)
 	return (0);
 }
 
-int ft_sort_tab(int *tab, t_data *data, int size)
+int ft_sort_tab(int *tab, int size)
 {
     int i;
     int j;
     int tmp;
 
-    ft_print_tab(data, tab);
     i = 1;
     while (i < size)
     {
@@ -53,7 +52,6 @@ int ft_sort_tab(int *tab, t_data *data, int size)
         tab[j + 1] = tmp;
         i++;
     }
-	ft_print_tab(data, tab);
     return (0);
 }
 
@@ -71,7 +69,7 @@ int ft_index(t_list **a, t_data *data)
 		copy[i] = data->tab[i];
 		i++;
 	}
-	ft_sort_tab(copy, data, data->size);
+	ft_sort_tab(copy, data->size);
 	i = 0;
 	while (i < data->size)
 	{
@@ -87,8 +85,6 @@ int ft_index(t_list **a, t_data *data)
 		}
 		i++;
 	}
-	ft_print_tab(data, copy);
 	ft_tab_to_list(a, data, copy);
-
 	return (0);
 }

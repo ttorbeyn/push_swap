@@ -81,9 +81,10 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data);
 //int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data);
 
 //ft_tab
-void    ft_print_tab(t_data *data, int *tab);
+
 int ft_list_to_tab(t_list **a, t_data *data);
-//int ft_sort_tab(t_list **a, t_data *data, int size);
+int ft_tab_to_list(t_list **a, t_data *data, int *tab);
+int ft_sort_tab(int *tab, int size);
 int ft_index(t_list **a, t_data *data);
 
 
@@ -112,6 +113,7 @@ int	ft_lst_is_sort_descendant(t_list **a);
 int	ft_tab_is_sort_ascendant(int *tab);
 
 //ft_utils_print
+void    ft_print_tab(t_data *data, int *tab);
 int	ft_print_list_adress(t_list *a, t_list *b);
 int	ft_print_list(t_list *a, t_list *b);
 
