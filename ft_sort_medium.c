@@ -29,80 +29,88 @@
 //    return (0);
 //}
 
-int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
-{
-	int i;
-	int j = 0;
-	int x = 0;
+//int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
+//{
+//	int i;
+//	int j = 0;
+//	int x = 0;
+//
+//	data->size = ft_lstsize(a);
+//	while (data->size > 2)
+//	{
+//		i = 0;
+//		ft_find_midpoint(a, data, data->size);
+//		if (data->size % 2 == 0)
+//			data->size--;
+//		while (i < data->size/2)
+//		{
+//			if ((*a)->content < data->midpoint)
+//			{
+//				ft_pb(a, b, 1);
+//				i++;
+//			}
+//			else
+//				ft_ra(a, 1);
+//		}
+//		data->chunk[data->chunknb++] = i;
+//		data->chunk[data->chunknb] = -1;
+//		printf("size before : %d\n", data->size);
+//		data->size = ft_lstsize(a);
+//		printf("size after : %d\n", data->size);
+//		j++;
+//		ft_print_list(*a, *b);
+//	}
+//	if ((*a)->content > (*a)->next->content)
+//		ft_sa(a, 1);
+//	data->chunknb--;
+//
+//	while (data->chunknb >=0)
+//	{
+//		if (data->chunk[data->chunknb] < 2)
+//		{
+//			ft_pa(a, b, 1);
+//			data->chunknb--;
+//		}
+//		else if (data->chunk[data->chunknb] == 2)
+//		{
+//			if ((*a)->content < (*a)->next->content)
+//				ft_sb(b, 1);
+//			ft_pa(a, b, 1);
+//			ft_pa(a, b, 1);
+//			data->chunknb--;
+//		}
+//		while (data->chunk[data->chunknb] > 2)
+//		{
+//			ft_find_midpoint(b, data, data->chunk[data->chunknb]);
+//			printf("midpoint : %d\n", data->midpoint);
+//			while ((*b)->content > data->midpoint)
+//			{
+//				ft_pa(a, b, 1);
+//				i++;
+//			}
+//			ft_rb(b, 1);
+//			data->chunk[data->chunknb]--;
+//		}
+//		ft_print_list(*a, *b);
+//	}
+//
+//
+//
+//	ft_print_list(*a, *b);
+//	while (data->chunk[x] != -1)
+//	{
+//		printf("data chunk [%d] : %d\n", x, data->chunk[x]);
+//		x++;
+//	}
+//	return (0);
+//}
 
-	data->size = ft_lstsize(a);
-	while (data->size > 2)
-	{
-		i = 0;
-		ft_find_midpoint(a, data, data->size);
-		if (data->size % 2 == 0)
-			data->size--;
-		while (i < data->size/2)
-		{
-			if ((*a)->content < data->midpoint)
-			{
-				ft_pb(a, b, 1);
-				i++;
-			}
-			else
-				ft_ra(a, 1);
-		}
-		data->chunk[data->chunknb++] = i;
-		data->chunk[data->chunknb] = -1;
-		printf("size before : %d\n", data->size);
-		data->size = ft_lstsize(a);
-		printf("size after : %d\n", data->size);
-		j++;
-		ft_print_list(*a, *b);
-	}
-	if ((*a)->content > (*a)->next->content)
-		ft_sa(a, 1);
-	data->chunknb--;
-
-	while (data->chunknb >=0)
-	{
-		if (data->chunk[data->chunknb] < 2)
-		{
-			ft_pa(a, b, 1);
-			data->chunknb--;
-		}
-		else if (data->chunk[data->chunknb] == 2)
-		{
-			if ((*a)->content < (*a)->next->content)
-				ft_sb(b, 1);
-			ft_pa(a, b, 1);
-			ft_pa(a, b, 1);
-			data->chunknb--;
-		}
-		while (data->chunk[data->chunknb] > 2)
-		{
-			ft_find_midpoint(b, data, data->chunk[data->chunknb]);
-			printf("midpoint : %d\n", data->midpoint);
-			if ((*b)->content > data->midpoint)
-			{
-				ft_pa(a, b, 1);
-				i++;
-			}
-			else
-				ft_rb(b, 1);
-			data->chunk[data->chunknb]--;
-		}
-		ft_print_list(*a, *b);
-	}
-
-
-
-	ft_print_list(*a, *b);
-	while (data->chunk[x] != -1)
-	{
-		printf("data chunk [%d] : %d\n", x, data->chunk[x]);
-		x++;
-	}
-	return (0);
-}
-
+//int	convert_to_binary(t_list **a)
+//{
+//
+//}
+//
+//int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
+//{
+//
+//}

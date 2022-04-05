@@ -8,7 +8,7 @@ void    ft_print_tab(t_data *data)
     printf("tabsize : %d\n", data->size);
     while (i < data->size)
     {
-        printf("%d\n", data->tab[i]);
+        printf("index : %d| valeur : %d\n", i, data->tab[i]);
         i++;
     }
 }
