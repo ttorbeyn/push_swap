@@ -23,21 +23,29 @@ static int	ft_isspace2(char *str)
 	return (i);
 }
 
-long	ft_atoi(char *str, t_list **a)
+static int	ft_define_sign(int *sign, char *str)
 {
-	int					i;
-	long		y;
-	int					sign;
-	int					c;
+	int i;
 
-	sign = 1;
+	*sign = 1;
 	i = ft_isspace2(str);
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign = -1;
+			*sign = -1;
 		i++;
 	}
+	return (i);
+}
+
+long	ft_atoi(char *str, t_list **a)
+{
+	int		i;
+	long	y;
+	int		sign;
+	int		c;
+
+	i = ft_define_sign(&sign, str);
 	y = 0;
 	c = 0;
 	if (!ft_isdigit(str[i]))

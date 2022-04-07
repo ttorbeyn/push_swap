@@ -1,24 +1,23 @@
 #include "includes/push_swap.h"
 
-
 int	ft_check_duplicate(t_list **a)
 {
-	t_list *first;
-	t_list *tmp;
+	t_list	*first;
+	t_list	*tmp;
 
-    tmp = *a;
+	tmp = *a;
 	while (tmp)
 	{
-        first = tmp->next;
+		first = tmp->next;
 		while (first)
 		{
-            if (first->content == tmp->content)
+			if (first->content == tmp->content)
 				ft_exit(a);
 			first = first->next;
 		}
 		tmp = tmp->next;
 	}
-    return (0);
+	return (0);
 }
 
 void	ft_lstadd_front2(t_list **lst, t_list *new)
@@ -31,7 +30,7 @@ void	ft_lstadd_front2(t_list **lst, t_list *new)
 
 void	ft_lstadd_back2(t_list **lst, t_list *new)
 {
-	t_list *first;
+	t_list	*first;
 
 	first = *lst;
 	first = ft_lstlast(first);
@@ -40,22 +39,23 @@ void	ft_lstadd_back2(t_list **lst, t_list *new)
 	new->next = NULL;
 }
 
-int ft_parsing(char *str, t_list **a)
+int	ft_parsing(char *str, t_list **a)
 {
-	t_list *b = NULL;
-	char **new;
-	int	i;
+	t_list	*b;
+	char	**new;
+	int		i;
 
 	i = 0;
+	b = NULL;
 	new = ft_split(str, ' ');
-    while (new[i])
+	while (new[i])
 	{
-        b = ft_lstnew(ft_atoi(new[i], a));
-        i++;
-        if (a && *a)
-            ft_lstadd_back2(a, b);
+		b = ft_lstnew(ft_atoi(new[i], a));
+		i++;
+		if (a && *a)
+			ft_lstadd_back2(a, b);
 		else
-            *a = b;
-    }
-    return (0);
+			*a = b;
+	}
+	return (0);
 }

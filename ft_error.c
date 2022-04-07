@@ -2,7 +2,7 @@
 
 int	ft_destroy(t_list **a)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	if (a)
 	{

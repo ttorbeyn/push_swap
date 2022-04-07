@@ -1,148 +1,29 @@
 #include "includes/push_swap.h"
 
-//int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
-//{
-//    int i;
-//
-//    i = 0;
-//    while (ft_lstsize(a) > 5)
-//    {
-//        ft_sort_tab(a, data);
-//        data->midpoint = data->tab[data->size/2];
-//        if (data->size % 2 == 0)
-//            data->size--;
-//        printf("midpoint : %d\n", data->midpoint);
-//        while (i < data->size/2)
-//        {
-//            if ((*a)->content > data->midpoint)
-//            {
-//                ft_pb(a, b, 1);
-//                i++;
-//            }
-//            else
-//                ft_ra(a, 1);
-//        }
-//    }
-//    ft_sort_five(a, b, data);
-//    ft_print_tab(data);
-//    ft_print_list(*a, *b);
-//    return (0);
-//}
-
-//int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
-//{
-//	int i;
-//	int j = 0;
-//	int x = 0;
-//
-//	data->size = ft_lstsize(a);
-//	while (data->size > 2)
-//	{
-//		i = 0;
-//		ft_find_midpoint(a, data, data->size);
-//		if (data->size % 2 == 0)
-//			data->size--;
-//		while (i < data->size/2)
-//		{
-//			if ((*a)->content < data->midpoint)
-//			{
-//				ft_pb(a, b, 1);
-//				i++;
-//			}
-//			else
-//				ft_ra(a, 1);
-//		}
-//		data->chunk[data->chunknb++] = i;
-//		data->chunk[data->chunknb] = -1;
-//		printf("size before : %d\n", data->size);
-//		data->size = ft_lstsize(a);
-//		printf("size after : %d\n", data->size);
-//		j++;
-//		ft_print_list(*a, *b);
-//	}
-//	if ((*a)->content > (*a)->next->content)
-//		ft_sa(a, 1);
-//	data->chunknb--;
-//
-//	while (data->chunknb >=0)
-//	{
-//		if (data->chunk[data->chunknb] < 2)
-//		{
-//			ft_pa(a, b, 1);
-//			data->chunknb--;
-//		}
-//		else if (data->chunk[data->chunknb] == 2)
-//		{
-//			if ((*a)->content < (*a)->next->content)
-//				ft_sb(b, 1);
-//			ft_pa(a, b, 1);
-//			ft_pa(a, b, 1);
-//			data->chunknb--;
-//		}
-//		while (data->chunk[data->chunknb] > 2)
-//		{
-//			ft_find_midpoint(b, data, data->chunk[data->chunknb]);
-//			printf("midpoint : %d\n", data->midpoint);
-//			while ((*b)->content > data->midpoint)
-//			{
-//				ft_pa(a, b, 1);
-//				i++;
-//			}
-//			ft_rb(b, 1);
-//			data->chunk[data->chunknb]--;
-//		}
-//		ft_print_list(*a, *b);
-//	}
-//
-//
-//
-//	ft_print_list(*a, *b);
-//	while (data->chunk[x] != -1)
-//	{
-//		printf("data chunk [%d] : %d\n", x, data->chunk[x]);
-//		x++;
-//	}
-//	return (0);
-//}
-
-//int	convert_to_binary(t_list **a)
-//{
-//
-//}
-//
-//int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
-//{
-//
-//}
+int	define_max(t_list **a, t_data *data)
+{
+	data->num_max = data->lst_size - 1;
+	data->bits_max = 0;
+	ft_index(a, data);
+	while ((data->num_max >> data->bits_max) != 0)
+		data->bits_max++;
+	return (0);
+}
 
 int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
 {
-	int size;
-	int max;
-	int bits;
-	int i;
-	int j;
-	int num;
+	int	i;
+	int	j;
 
-
-	size = data->size;
-	max = size - 1;
-	bits = 0;
-	printf("max : %d\n", max);
-
-	while ((max >> bits) != 0)
-		bits++;
-	printf("max : %d\n", bits);
-
+	define_max(a, data);
 	i = 0;
-	while (i < bits)
+	while (i < data->bits_max)
 	{
-
 		j = 0;
-		while (j < size)
+		while (j < data->lst_size)
 		{
-			num = (*a)->content;
-			if (((num >> i)&1) == 1)
+			data->num = (*a)->content;
+			if (((data->num >> i) & 1) == 1)
 				ft_ra(a, 1);
 			else
 				ft_pb(a, b, 1);

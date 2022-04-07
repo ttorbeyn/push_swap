@@ -1,16 +1,16 @@
 #include "includes/push_swap.h"
 
-void    ft_print_tab(t_data *data, int *tab)
+void	ft_print_tab(t_data *data, int *tab)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    printf("tabsize : %d\n", data->size);
-    while (i < data->size)
-    {
-        printf("value[%d] :%d\n", i, tab[i]);
-        i++;
-    }
+	i = 0;
+	printf("tabsize : %d\n", data->lst_size);
+	while (i < data->lst_size)
+	{
+		printf("value[%d] :%d\n", i, tab[i]);
+		i++;
+	}
 }
 
 int	ft_print_list_adress(t_list *a, t_list *b)
@@ -23,7 +23,6 @@ int	ft_print_list_adress(t_list *a, t_list *b)
 			printf("%p\t|\t%p\n", a->previous, b->previous);
 		printf("%d\t\t|\t%d\n", a->content, b->content);
 		printf("%p\t|\t%p\n", a, b);
-		//printf("%p\t|\t%p\n", a->next, b->next);
 		printf("----------------------------------\n");
 		a = a->next;
 		b = b->next;
@@ -74,5 +73,30 @@ int	ft_print_list(t_list *a, t_list *b)
 		b = b->next;
 	}
 	printf("\n");
+	return (0);
+}
+
+int	ft_decimal_to_binary(int *tab, t_data *data)
+{
+	int	i;
+	int	x;
+	int	nb;
+	int	ret;
+
+	i = 0;
+	while (i < data->lst_size)
+	{
+		nb = 0;
+		x = 1;
+		while (tab[i])
+		{
+			ret = tab[i] % 2;
+			nb += ret * x;
+			tab[i] = tab[i] / 2;
+			x *= 10;
+		}
+		tab[i] = nb;
+		i++;
+	}
 	return (0);
 }
