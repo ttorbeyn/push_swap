@@ -60,13 +60,3 @@ int	ft_error_free_both(t_list **a, t_list **b)
 	write(2, "Error\n", 6);
 	exit (EXIT_FAILURE);
 }
-
-int	ft_free_all(t_list **a, t_list **b, t_data *data)
-{
-	if (a)
-		ft_destroy(a);
-	if (b)
-		ft_destroy(b);
-	ft_free_data(data);
-	return (0);
-}

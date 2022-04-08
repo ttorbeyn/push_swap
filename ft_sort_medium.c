@@ -22,7 +22,7 @@ int	define_max(t_list **a, t_data *data)
 	return (0);
 }
 
-int	ft_sort_one_hundred(t_list **a, t_list **b, t_data *data)
+int	ft_sort_hundred(t_list **a, t_list **b, t_data *data)
 {
 	int	i;
 	int	j;
