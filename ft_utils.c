@@ -39,20 +39,6 @@ int	ft_lst_is_sort_ascendant(t_list **a)
 	return (0);
 }
 
-int	ft_lst_is_sort_descendant(t_list **a)
-{
-	t_list	*first;
-
-	first = *a;
-	while (first->next)
-	{
-		if (first->content < first->next->content)
-			return (1);
-		first = first->next;
-	}
-	return (0);
-}
-
 int	ft_tab_is_sort_ascendant(int *tab)
 {
 	int	i;

@@ -15,32 +15,23 @@ CFLAGS			=	-Wall -Wextra -Werror
 
 INCLUDE			=	-I include
 
-#LIBFT			=	@ cd libft && make ;
-
 SRC				=	ft_push_swap.c \
 					ft_operator_1.c \
 					ft_operator_2.c \
 					ft_operator_3.c \
 					ft_parsing.c \
 					ft_utils.c \
-					ft_error.c \
+					ft_free.c \
 					ft_sort_small.c \
 					ft_sort_medium.c \
 					ft_tab.c \
-					ft_utils_print.c \
 					./libft_modif/ft_atoi.c \
 					./libft_modif/ft_split.c \
-					./libft_modif/ft_lstadd_back.c \
 					./libft_modif/ft_lstnew.c \
 					./libft_modif/ft_lstsize.c \
-					./libft_modif/ft_lstlast.c
-#					libft_modif/ft_lstadd_front.c \
-#					libft_modif/ft_lstclear.c \
-#					libft_modif/ft_lstdelone.c \
-#					libft_modif/ft_lstiter.c \
-#					libft_modif/ft_lstlast.c \
-#					libft_modif/ft_lstmap.c \
-#					libft_modif/ft_lstsize.c
+					./libft_modif/ft_lstlast.c \
+					./libft_modif/ft_lstadd_back.c \
+					./libft_modif/ft_lstbeforelast.c
 
 OBJS			=	$(SRC:.c=.o)
 

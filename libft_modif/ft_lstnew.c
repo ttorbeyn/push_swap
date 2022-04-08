@@ -18,10 +18,8 @@ t_list	*ft_lstnew(int content)
 
 	begin = malloc(sizeof(t_list));
 	if (!begin)
-		return (NULL);
-	if (begin == 0)
-		return (0);
+		ft_exit();
+	begin->next = NULL;
 	begin->content = content;
-	begin->next = 0;
 	return (begin);
 }

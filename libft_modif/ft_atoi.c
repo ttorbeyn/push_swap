@@ -38,7 +38,7 @@ static int	ft_define_sign(int *sign, char *str)
 	return (i);
 }
 
-long	ft_atoi(char *str, t_list **a)
+long	ft_atoi(char *str)
 {
 	int		i;
 	long	y;
@@ -49,7 +49,7 @@ long	ft_atoi(char *str, t_list **a)
 	y = 0;
 	c = 0;
 	if (!ft_isdigit(str[i]))
-		ft_exit (a);
+		ft_exit();
 	while (str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
 	{
 		y *= 10;
@@ -59,6 +59,6 @@ long	ft_atoi(char *str, t_list **a)
 	}
 	y *= sign;
 	if ((str[i] != ' ' && str[i] != '\0') || y > INT_MAX || y < INT_MIN)
-		ft_exit (a);
+		ft_exit();
 	return (y);
 }

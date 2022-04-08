@@ -29,7 +29,6 @@ typedef struct s_list
 	int				index;
 	int				binary;
 	struct s_list	*next;
-	struct s_list	*previous;
 }					t_list;
 
 typedef struct s_data
@@ -47,8 +46,12 @@ typedef struct s_data
 
 //ft_push_swap
 
-//ft_error
-int		ft_exit(t_list **a);
+//ft_free
+int		ft_exit(void);
+int		ft_error_free_one(t_list **x);
+int		ft_error_free_both(t_list **a, t_list **b);
+int 	ft_free_data(t_data *data);
+int		ft_free_all(t_list **a, t_list **b, t_data *data);
 
 //ft_operator_1
 int		ft_sa(t_list **a, int write_sa);
@@ -87,29 +90,22 @@ int		ft_sort_tab(int *tab, int size);
 int		ft_decimal_to_binary(int *tab, t_data *data);
 int		ft_index(t_list **a, t_data *data);
 
-//lst_utils
-long	ft_atoi(char *str, t_list **a);
-char	**ft_split(char const *s, char c);
-void	ft_lstadd_back(t_list **alst, t_list *new);
-t_list	*ft_lstnew(int content);
-t_list	*ft_lstlast(t_list *lst);
-int		ft_lstsize(t_list **lst);
-void	ft_lstclear(t_list **lst, void (*del)(int));
-//void				ft_lstadd_front(t_list **alst, t_list *new);
-//void				ft_lstclear(t_list **lst, void (*del)(int));
-//void				ft_lstdelone(t_list *lst, void (*del)(int));
-//void				ft_lstiter(t_list *lst, void (*f)(int));
-//t_list				*ft_lstlast(t_list *lst);
-//t_list				*ft_lstmap(t_list *lst, int (*f)(int),
-//								 void (*del)(int));
-//int					ft_lstsize(t_list *lst);
-
 //ft_utils
 int		ft_isdigit(char c);
 int		ft_isspace(char str);
 int		ft_lst_is_sort_ascendant(t_list **a);
-int		ft_lst_is_sort_descendant(t_list **a);
 int		ft_tab_is_sort_ascendant(int *tab);
+
+//libft_modif
+long	ft_atoi(char *str);
+char	**ft_split(char const *s, char c);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+t_list	*ft_lstnew(int content);
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list **lst);
+void	ft_lstclear(t_list **lst, void (*del)(int));
+t_list	*ft_lstbeforelast(t_list *lst);
+
 
 //ft_utils_print
 void	ft_print_tab(t_data *data, int *tab);

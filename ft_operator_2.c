@@ -18,13 +18,11 @@ int	ft_ra(t_list **a, int write_ra)
 	t_list	*last;
 
 	if (!a || !*a || !(*a)->next)
-		return (1);
+		ft_error_free_one(a);
 	first = *a;
 	*a = first->next;
-	(*a)->previous = NULL;
 	last = ft_lstlast(*a);
 	last->next = first;
-	first->previous = last;
 	first->next = NULL;
 	if (write_ra)
 		write(1, "ra\n", 3);
@@ -37,13 +35,11 @@ int	ft_rb(t_list **b, int write_rb)
 	t_list	*last;
 
 	if (!b || !*b || !(*b)->next)
-		return (1);
+		ft_error_free_one(b);
 	first = *b;
 	*b = first->next;
-	(*b)->previous = NULL;
 	last = ft_lstlast(*b);
 	last->next = first;
-	first->previous = last;
 	first->next = NULL;
 	if (write_rb)
 		write(1, "rb\n", 3);
@@ -53,7 +49,7 @@ int	ft_rb(t_list **b, int write_rb)
 int	ft_rr(t_list **a, t_list **b, int write_rr)
 {
 	if (!a || !b)
-		return (1);
+		ft_error_free_both(a, b);
 	ft_ra(a, 0);
 	ft_rb(b, 0);
 	if (write_rr)

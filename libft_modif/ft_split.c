@@ -61,7 +61,8 @@ static char	**ft_freeall(char **new, int i)
 		j++;
 	}
 	free(new);
-	return (NULL);
+	ft_exit();
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -73,7 +74,7 @@ char	**ft_split(char const *s, char c)
 
 	new = malloc((sizeof(char *)) * (ft_wordcount(s, c) + 1));
 	if (!new || !s)
-		return (NULL);
+		ft_exit();
 	i = -1;
 	x = 0;
 	while (++i < (ft_wordcount(s, c)))
@@ -81,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		j = 0;
 		new[i] = malloc((sizeof(char) * (ft_wordlen(s, c, x) + 1)));
 		if (!new[i])
-			return (ft_freeall(new, i));
+			ft_freeall(new, i);
 		while (s[x] && s[x] == c)
 			x++;
 		while (s[x] && s[x] != c)

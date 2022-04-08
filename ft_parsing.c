@@ -24,7 +24,7 @@ int	ft_check_duplicate(t_list **a)
 		while (first)
 		{
 			if (first->content == tmp->content)
-				ft_exit(a);
+				ft_error_free_one(a);
 			first = first->next;
 		}
 		tmp = tmp->next;
@@ -32,42 +32,30 @@ int	ft_check_duplicate(t_list **a)
 	return (0);
 }
 
-void	ft_lstadd_front2(t_list **lst, t_list *new)
-{
-	(*lst)->previous = new;
-	new->next = *lst;
-	*lst = new;
-	new->previous = NULL;
-}
-
-void	ft_lstadd_back2(t_list **lst, t_list *new)
-{
-	t_list	*first;
-
-	first = *lst;
-	first = ft_lstlast(first);
-	first->next = new;
-	new->previous = first;
-	new->next = NULL;
-}
-
 int	ft_parsing(char *str, t_list **a)
 {
-	t_list	*b;
+	t_list	*token;
 	char	**new;
 	int		i;
 
 	i = 0;
-	b = NULL;
+	token = NULL;
+	new = NULL;
 	new = ft_split(str, ' ');
+	if (!new)
+		ft_error_free_one(a);
 	while (new[i])
 	{
-		b = ft_lstnew(ft_atoi(new[i], a));
+		token = ft_lstnew(ft_atoi(new[i]));
 		i++;
 		if (a && *a)
-			ft_lstadd_back2(a, b);
+			ft_lstadd_back(a, token);
 		else
-			*a = b;
+			*a = token;
 	}
+	i = 0;
+	while (new[i])
+		free(new[i++]);
+	free(new);
 	return (0);
 }

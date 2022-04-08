@@ -35,5 +35,6 @@ int	main(int ac, char **av)
 		ft_sort_five(&a, &b, &data);
 	else if (data.lst_size <= 500)
 		ft_sort_one_hundred(&a, &b, &data);
-	return (0);
+	ft_free_all(&a, &b, &data);
+	exit (0);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_print_tab(t_data *data, int *tab)
 {
@@ -31,8 +31,6 @@ int	ft_print_list_adress(t_list *a, t_list *b)
 	printf("----------------------------------\n");
 	while (a && b)
 	{
-		if (a->previous && b->previous)
-			printf("%p\t|\t%p\n", a->previous, b->previous);
 		printf("%d\t\t|\t%d\n", a->content, b->content);
 		printf("%p\t|\t%p\n", a, b);
 		printf("----------------------------------\n");
@@ -41,8 +39,6 @@ int	ft_print_list_adress(t_list *a, t_list *b)
 	}
 	while (a)
 	{
-		if (a->previous)
-			printf("%p\t|\t\n", a->previous);
 		printf("%d\t\t|\t\n", a->content);
 		printf("%p\t|\t\n", a);
 		printf("----------------------------------\n");
@@ -50,8 +46,6 @@ int	ft_print_list_adress(t_list *a, t_list *b)
 	}
 	while (b)
 	{
-		if (b->previous)
-			printf("\t|\t%p\n", b->previous);
 		printf(" \t\t|\t%d\n", b->content);
 		printf("\t|\t%p\n", b);
 		printf("----------------------------------\n");

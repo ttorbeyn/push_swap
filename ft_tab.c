@@ -18,6 +18,8 @@ int	ft_list_to_tab(t_list **a, t_data *data)
 	int		i;
 
 	data->tab = malloc(sizeof(int) * data->lst_size);
+	if (!data->tab)
+		ft_error_free_one(a);
 	i = 0;
 	tmp = *a;
 	while (tmp)
@@ -74,6 +76,11 @@ int	ft_copy_tab(t_list **a, t_data *data)
 	i = 0;
 	ft_list_to_tab(a, data);
 	data->copy = malloc(sizeof(int) * data->lst_size);
+	if (!data->copy)
+	{
+		ft_error_free_one(a);
+		ft_free_data(data);
+	}
 	while (i < data->lst_size)
 	{
 		data->copy[i] = data->tab[i];

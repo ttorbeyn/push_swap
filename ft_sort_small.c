@@ -18,7 +18,7 @@ int	ft_sort_three(t_list **a)
 	t_list	*second;
 
 	if (!a)
-		return (1);
+		ft_error_free_one(a);
 	while (ft_lst_is_sort_ascendant(a))
 	{
 		first = *a;
@@ -41,7 +41,7 @@ int	ft_sort_three_b(t_list **b)
 	t_list	*second;
 
 	if (!b)
-		return (1);
+		ft_error_free_one(b);
 	while (ft_lst_is_sort_ascendant(b))
 	{
 		first = *b;

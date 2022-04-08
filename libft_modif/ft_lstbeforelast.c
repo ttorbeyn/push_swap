@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_lstbeforelast.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 17:34:47 by ttorbeyn          #+#    #+#             */
-/*   Updated: 2022/04/07 17:34:53 by ttorbeyn         ###   ########.fr       */
+/*   Created: 2022/04/08 22:55:01 by ttorbeyn          #+#    #+#             */
+/*   Updated: 2022/04/08 22:55:05 by ttorbeyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-int	ft_destroy(t_list **a)
+t_list	*ft_lstbeforelast(t_list *lst)
 {
-	t_list	*tmp;
-
-	if (a)
-	{
-		while (*a)
-		{
-			tmp = *a;
-			*a = (*a)->next;
-			free(tmp);
-		}
-	}
-	return (0);
-}
-
-int	ft_exit(t_list **a)
-{
-	if (a)
-		ft_destroy(a);
-	write(2, "Error\n", 6);
-	exit (0);
+	if (!lst)
+		ft_exit();
+	while (lst->next->next != 0)
+		lst = lst->next;
+	return (lst);
 }

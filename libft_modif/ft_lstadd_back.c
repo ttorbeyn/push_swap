@@ -12,20 +12,12 @@
 
 #include "../includes/push_swap.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*current;
+	t_list	*first;
 
-	if (!alst || !new)
-		return ;
-	current = *alst;
-	if (current == 0)
-		*alst = new;
-	else
-	{
-		while (current->next)
-			current = current->next;
-		current->next = new;
-		new->next = 0;
-	}
+	first = *lst;
+	first = ft_lstlast(first);
+	first->next = new;
+	new->next = NULL;
 }
