@@ -25,7 +25,7 @@ static int	ft_isspace2(char *str)
 
 static int	ft_define_sign(int *sign, char *str)
 {
-	int i;
+	int	i;
 
 	*sign = 1;
 	i = ft_isspace2(str);

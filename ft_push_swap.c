@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_push_swap.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/03 01:37:57 by ttorbeyn          #+#    #+#             */
+/*   Updated: 2022/01/03 01:37:58 by ttorbeyn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/push_swap.h"
 
 int	main(int ac, char **av)
@@ -23,6 +35,5 @@ int	main(int ac, char **av)
 		ft_sort_five(&a, &b, &data);
 	else if (data.lst_size <= 500)
 		ft_sort_one_hundred(&a, &b, &data);
-//	ft_print_list(a, b);
 	return (0);
 }
