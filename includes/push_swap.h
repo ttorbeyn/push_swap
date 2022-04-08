@@ -50,7 +50,7 @@ typedef struct s_data
 int		ft_exit(void);
 int		ft_error_free_one(t_list **x);
 int		ft_error_free_both(t_list **a, t_list **b);
-int 	ft_free_data(t_data *data);
+int		ft_free_data(t_data *data);
 int		ft_free_all(t_list **a, t_list **b, t_data *data);
 
 //ft_operator_1
@@ -83,7 +83,6 @@ int		ft_sort_five(t_list **a, t_list **b, t_data *data);
 int		ft_sort_hundred(t_list **a, t_list **b, t_data *data);
 
 //ft_tab
-
 int		ft_list_to_tab(t_list **a, t_data *data);
 int		ft_tab_to_list(t_list **a, t_data *data, int *tab);
 int		ft_sort_tab(int *tab, int size);
@@ -105,7 +104,6 @@ t_list	*ft_lstlast(t_list *lst);
 int		ft_lstsize(t_list **lst);
 void	ft_lstclear(t_list **lst, void (*del)(int));
 t_list	*ft_lstbeforelast(t_list *lst);
-
 
 //ft_utils_print
 void	ft_print_tab(t_data *data, int *tab);

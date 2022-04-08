@@ -28,13 +28,13 @@ static int	ft_destroy(t_list **x)
 	return (0);
 }
 
-int ft_exit(void)
+int	ft_exit(void)
 {
 	write(2, "Error\n", 6);
 	exit (EXIT_FAILURE);
 }
 
-int ft_free_data(t_data *data)
+int	ft_free_data(t_data *data)
 {
 	if (data->tab)
 		free(data->tab);
@@ -43,7 +43,7 @@ int ft_free_data(t_data *data)
 	return (0);
 }
 
-int ft_error_free_one(t_list **x)
+int	ft_error_free_one(t_list **x)
 {
 	if (x)
 		ft_destroy(x);
