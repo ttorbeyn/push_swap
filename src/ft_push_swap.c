@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int	main(int ac, char **av)
 {
@@ -22,6 +22,8 @@ int	main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	x = 1;
+	if (x == ac)
+		exit(0);
 	while (x < ac)
 	{
 		ft_parsing(av[x], &a);
@@ -33,7 +35,7 @@ int	main(int ac, char **av)
 		ft_sort_three(&a);
 	else if (data.lst_size <= 5)
 		ft_sort_five(&a, &b, &data);
-	else if (data.lst_size <= 500)
+	else
 		ft_sort_hundred(&a, &b, &data);
 	exit (0);
 }

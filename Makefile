@@ -5,33 +5,34 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/04/26 18:56:41 by ttorbeyn          #+#    #+#              #
-#    Updated: 2021/12/30 20:22:25 by hubert           ###   ########.fr        #
+#    Created: 2022/04/09 13:46:03 by ttorbeyn          #+#    #+#              #
+#    Updated: 2022/04/09 13:46:08 by ttorbeyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 CC				=	gcc
 
 CFLAGS			=	-Wall -Wextra -Werror
 
 INCLUDE			=	-I include
 
-SRC				=	ft_push_swap.c \
-					ft_operator_1.c \
-					ft_operator_2.c \
-					ft_operator_3.c \
-					ft_parsing.c \
-					ft_utils.c \
-					ft_free.c \
-					ft_sort_small.c \
-					ft_sort_medium.c \
-					ft_tab.c \
-					./libft_modif/ft_atoi.c \
-					./libft_modif/ft_split.c \
-					./libft_modif/ft_lstnew.c \
-					./libft_modif/ft_lstsize.c \
-					./libft_modif/ft_lstlast.c \
-					./libft_modif/ft_lstadd_back.c \
-					./libft_modif/ft_lstbeforelast.c
+SRC				=	./src/ft_push_swap.c \
+					./src/ft_operator_1.c \
+					./src/ft_operator_2.c \
+					./src/ft_operator_3.c \
+					./src/ft_parsing.c \
+					./src/ft_utils.c \
+					./src/ft_free.c \
+					./src/ft_sort_small.c \
+					./src/ft_sort_medium.c \
+					./src/ft_tab.c \
+					./libft/ft_atoi.c \
+					./libft/ft_split.c \
+					./libft/ft_lstnew.c \
+					./libft/ft_lstsize.c \
+					./libft/ft_lstlast.c \
+					./libft/ft_lstadd_back.c \
+					./libft/ft_lstbeforelast.c
 
 OBJS			=	$(SRC:.c=.o)
 

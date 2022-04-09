@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-int	define_max(t_list **a, t_data *data)
+static int	define_max(t_list **a, t_data *data)
 {
 	data->num_max = data->lst_size - 1;
 	data->bits_max = 0;
@@ -27,6 +27,8 @@ int	ft_sort_hundred(t_list **a, t_list **b, t_data *data)
 	int	i;
 	int	j;
 
+	if (!ft_lst_is_sort_ascendant(a))
+		exit (0);
 	define_max(a, data);
 	i = 0;
 	while (i < data->bits_max)

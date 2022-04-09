@@ -6,7 +6,7 @@
 /*   By: ttorbeyn <ttorbeyn@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:12:36 by ttorbeyn          #+#    #+#             */
-/*   Updated: 2022/01/05 00:27:20 by hubert           ###   ########.fr       */
+/*   Updated: 2022/04/09 13:49:53 by ttorbeyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int		ft_exit(void);
 int		ft_error_free_one(t_list **x);
 int		ft_error_free_both(t_list **a, t_list **b);
 int		ft_free_data(t_data *data);
-int		ft_free_all(t_list **a, t_list **b, t_data *data);
 
 //ft_operator_1
 int		ft_sa(t_list **a, int write_sa);
@@ -71,12 +70,12 @@ int		ft_rrb(t_list **b, int write_rrb);
 int		ft_rrr(t_list **a, t_list **b, int write_rrr);
 
 //ft_parsing
-void	ft_lstadd_front2(t_list **lst, t_list *new);
-int		ft_parsing(char *str, t_list **a);
 int		ft_check_duplicate(t_list **a);
+int		ft_parsing(char *str, t_list **a);
 
 //ft_sort_small
 int		ft_sort_three(t_list **a);
+int		ft_sort_three_b(t_list **b);
 int		ft_sort_five(t_list **a, t_list **b, t_data *data);
 
 //ft_sort_medium
@@ -86,16 +85,14 @@ int		ft_sort_hundred(t_list **a, t_list **b, t_data *data);
 int		ft_list_to_tab(t_list **a, t_data *data);
 int		ft_tab_to_list(t_list **a, t_data *data, int *tab);
 int		ft_sort_tab(int *tab, int size);
-int		ft_decimal_to_binary(int *tab, t_data *data);
+int		ft_copy_tab(t_list **a, t_data *data);
 int		ft_index(t_list **a, t_data *data);
 
 //ft_utils
 int		ft_isdigit(char c);
-int		ft_isspace(char str);
 int		ft_lst_is_sort_ascendant(t_list **a);
-int		ft_tab_is_sort_ascendant(int *tab);
 
-//libft_modif
+//libft
 long	ft_atoi(char *str);
 char	**ft_split(char const *s, char c);
 void	ft_lstadd_back(t_list **lst, t_list *new);
@@ -104,10 +101,5 @@ t_list	*ft_lstlast(t_list *lst);
 int		ft_lstsize(t_list **lst);
 void	ft_lstclear(t_list **lst, void (*del)(int));
 t_list	*ft_lstbeforelast(t_list *lst);
-
-//ft_utils_print
-void	ft_print_tab(t_data *data, int *tab);
-int		ft_print_list_adress(t_list *a, t_list *b);
-int		ft_print_list(t_list *a, t_list *b);
 
 #endif

@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-static int	ft_isspace2(char *str)
+static int	ft_isspace(char *str)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ static int	ft_define_sign(int *sign, char *str)
 	int	i;
 
 	*sign = 1;
-	i = ft_isspace2(str);
+	i = ft_isspace(str);
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')

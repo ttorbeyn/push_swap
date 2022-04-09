@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int	ft_sort_three(t_list **a)
 {
@@ -58,7 +58,7 @@ int	ft_sort_three_b(t_list **b)
 	return (0);
 }
 
-int	data_set(t_list **a, t_data *data)
+static int	data_set(t_list **a, t_data *data)
 {
 	ft_list_to_tab(a, data);
 	ft_sort_tab(data->tab, data->lst_size);
@@ -73,6 +73,8 @@ int	ft_sort_five(t_list **a, t_list **b, t_data *data)
 	int	i;
 
 	i = 0;
+	if (!ft_lst_is_sort_ascendant(a))
+		exit (0);
 	data_set(a, data);
 	while (i < data->lst_size / 2)
 	{
